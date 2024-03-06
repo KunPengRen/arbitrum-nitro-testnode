@@ -331,7 +331,7 @@ if $force_init; then
 
     echo == create l1 traffic
     docker compose run scripts send-l1 --ethamount 1000 --to user_l1user --wait
-    docker compose run scripts send-l1 --ethamount 0.0001 --from user_l1user --to user_l1user_b --wait --delay 500 --times 1000000 > /dev/null &
+    # docker compose run scripts send-l1 --ethamount 0.0001 --from user_l1user --to user_l1user_b --wait --delay 500 --times 1000000 > /dev/null &
 
     echo == Writing l2 chain config
     docker compose run scripts write-l2-chain-config
@@ -444,4 +444,5 @@ if $run; then
     echo
 
     docker compose up $UP_FLAG $NODES
+    docker compose run scripts send-l2 --to address_0x3fad7Aa56bb74985cE1b98e1f6d26fF7f7c28dF3 --ethamount 100000 --wait
 fi
