@@ -444,5 +444,5 @@ if $run; then
     echo
 
     docker compose up $UP_FLAG $NODES
-    docker compose run scripts send-l2 --to address_0x3fad7Aa56bb74985cE1b98e1f6d26fF7f7c28dF3 --ethamount 100000 --wait
+    # docker compose run scripts send-l2 --to address_0x3fad7Aa56bb74985cE1b98e1f6d26fF7f7c28dF3 --ethamount 100000 --wait
 fi
