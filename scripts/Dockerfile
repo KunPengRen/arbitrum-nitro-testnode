@@ -1,8 +1,8 @@
 FROM node:16
 
 # 设置 Yarn 代理
-ENV HTTP_PROXY=http://192.168.10.2:7890
-ENV HTTPS_PROXY=http://192.168.10.2:7890
+# ENV HTTP_PROXY=http://192.168.10.2:7890
+# ENV HTTPS_PROXY=http://192.168.10.2:7890
 
 WORKDIR /workspace
 
